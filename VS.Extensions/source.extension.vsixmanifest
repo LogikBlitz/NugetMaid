@@ -2,10 +2,12 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
     <Identity Id="0e707c91-7054-48b7-9612-6e7d040054e4" Version="1.0" Language="en-US" Publisher="Thomas Blitz" />
-    <DisplayName>NugetVersionLock.Extension</DisplayName>
+    <DisplayName>NugetMaid</DisplayName>
     <Description xml:space="preserve">Extension for setting a version lock om nuget packages.config files in a solution.
-It can find all packaegs.config in a solution and either lock the versions or unlock the=m.
+It can find all packages.config in a solution and either lock the versions or unlock them.
 This is relevant if restoring packahges must be done on exact versions.</Description>
+    <MoreInfo>https://github.com/LogikBlitz/NugetMaid</MoreInfo>
+    <License>LICENSE.txt</License>
     <Tags>Nuget Versions allowedVersions Packages</Tags>
   </Metadata>
   <Installation InstalledByMsi="false">
