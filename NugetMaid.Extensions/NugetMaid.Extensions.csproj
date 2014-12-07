@@ -134,7 +134,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="VS.ExtensionsPackage.cs" />
+    <Compile Include="NugetMaid.ExtensionsPackage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PkgCmdID.cs" />
   </ItemGroup>
@@ -158,7 +158,7 @@
     <None Include="Key.snk" />
   </ItemGroup>
   <ItemGroup>
-    <VSCTCompile Include="VS.Extensions.vsct">
+    <VSCTCompile Include="NugetMaid.Extensions.vsct">
       <ResourceName>Menus.ctmenu</ResourceName>
     </VSCTCompile>
   </ItemGroup>
