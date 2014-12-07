@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Runtime.InteropServices;
-using InfomediaAS.VS_Extensions.Models;
+using LogikBlitz.NugetMaid.Models;
 using Microsoft.VisualStudio.Shell.Interop;
 
-namespace InfomediaAS.VS_Extensions.Helpers
+namespace LogikBlitz.NugetMaid.Helpers
 {
     internal static class HierachyExtension
     {

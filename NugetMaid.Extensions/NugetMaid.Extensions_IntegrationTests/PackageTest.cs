@@ -2,6 +2,7 @@
 using System.Text;
 using System.Collections.Generic;
 using System.Linq;
+using LogikBlitz.NugetMaid;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
 using Microsoft.VisualStudio.Shell.Interop;
@@ -49,7 +50,7 @@ namespace VS.Extensions_IntegrationTests
 
                 //Validate package load
                 IVsPackage package;
-                Guid packageGuid = new Guid(InfomediaAS.VS_Extensions.GuidList.guidVS_ExtensionsPkgString);
+                Guid packageGuid = new Guid(GuidList.guidVS_ExtensionsPkgString);
                 Assert.IsTrue(0 == shellService.LoadPackage(ref packageGuid, out package));
                 Assert.IsNotNull(package, "Package failed to load");
 

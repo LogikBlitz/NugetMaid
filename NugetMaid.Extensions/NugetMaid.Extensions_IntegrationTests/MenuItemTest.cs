@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.ComponentModel.Design;
+using LogikBlitz.NugetMaid;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.OLE.Interop;
 using Microsoft.VisualStudio.Shell.Interop;
@@ -42,7 +43,7 @@ namespace VS.Extensions_IntegrationTests
         {
             UIThreadInvoker.Invoke((ThreadInvoker)delegate()
             {
-                CommandID menuItemCmd = new CommandID(InfomediaAS.VS_Extensions.GuidList.GuidNugetUnlockVersionCommand, (int)InfomediaAS.VS_Extensions.PkgCmdIDList.cmdidLockNugetVersions);
+                CommandID menuItemCmd = new CommandID(GuidList.GuidNugetUnlockVersionCommand, (int)PkgCmdIDList.cmdidLockNugetVersions);
 
                 // Create the DialogBoxListener Thread.
                 string expectedDialogBoxText = string.Format(CultureInfo.CurrentCulture, "{0}\n\nInside {1}.MenuItemCallback()", "Infomedia VS Extensions", "InfomediaAS.VS_Extensions.VS_ExtensionsPackage");

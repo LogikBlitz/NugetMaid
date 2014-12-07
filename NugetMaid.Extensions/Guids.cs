@@ -1,8 +1,9 @@
 ﻿// Guids.cs
 // MUST match guids.h
+
 using System;
 
-namespace InfomediaAS.VS_Extensions
+namespace LogikBlitz.NugetMaid
 {
     static class GuidList
     {

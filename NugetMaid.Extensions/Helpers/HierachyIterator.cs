@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using Microsoft.VisualStudio.Shell.Interop;
 
-namespace InfomediaAS.VS_Extensions.Helpers
+namespace LogikBlitz.NugetMaid.Helpers
 {
     /// <summary>
     ///     Parts of this class has been derived from the work of Carlos J. Quintero, MZ-Tools

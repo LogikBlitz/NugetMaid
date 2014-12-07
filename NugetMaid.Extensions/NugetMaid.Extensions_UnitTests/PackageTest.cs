@@ -13,10 +13,10 @@ using System;
 using System.Collections;
 using System.Text;
 using System.Reflection;
+using LogikBlitz.NugetMaid;
 using Microsoft.VsSDK.UnitTestLibrary;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using InfomediaAS.VS_Extensions;
 
 namespace VS.Extensions_UnitTests
 {

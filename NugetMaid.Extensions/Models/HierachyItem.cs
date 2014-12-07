@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.Shell.Interop;
 
-namespace InfomediaAS.VS_Extensions.Models
+namespace LogikBlitz.NugetMaid.Models
 {
     public class HierachyItem
     {

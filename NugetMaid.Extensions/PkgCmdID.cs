@@ -1,8 +1,7 @@
 ﻿// PkgCmdID.cs
 // MUST match PkgCmdID.h
-using System;
 
-namespace InfomediaAS.VS_Extensions
+namespace LogikBlitz.NugetMaid
 {
     static class PkgCmdIDList
     {

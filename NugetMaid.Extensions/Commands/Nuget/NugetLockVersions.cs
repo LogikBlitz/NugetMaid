@@ -6,13 +6,13 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using EnvDTE;
-using InfomediaAS.VS_Extensions.Helpers;
-using InfomediaAS.VS_Extensions.Models;
+using LogikBlitz.NugetMaid.Helpers;
+using LogikBlitz.NugetMaid.Models;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 
-namespace InfomediaAS.VS_Extensions.Commands.Nuget
+namespace LogikBlitz.NugetMaid.Commands.Nuget
 {
     internal class NugetLockVersions //To get access to the UI
     {

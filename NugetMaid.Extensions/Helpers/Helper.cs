@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell.Interop;
 
-namespace InfomediaAS.VS_Extensions.Helpers
+namespace LogikBlitz.NugetMaid.Helpers
 {
     internal class Helper
     {
