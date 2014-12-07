@@ -33,7 +33,18 @@
     called "command set" and is used to group different command inside a logically related  
     group; your package should define its own command set in order to avoid collisions  
     with command ids defined by other packages. -->
+   
+    <Menus>
+      <Menu guid="guidNugetExtensionsCmdSet" id="nugetMaidMenu" priority="0x100" type="Menu">
+        <Parent guid="guidNugetExtensionsCmdSet" id="nugetMaidGroup" />
+        <CommandFlag>IconAndText</CommandFlag>
+        <Strings>
+          <ButtonText>NugetMaid</ButtonText>
+          <CommandName>NugetMaid</CommandName>
+        </Strings>
+      </Menu>
 
+    </Menus>
 
     <!-- In this section you can define new menu groups. A menu group is a container for 
          other menus or buttons (commands); from a visual point of view you can see the 
@@ -42,7 +53,12 @@
     <Groups>
 
       <Group guid="guidNugetExtensionsCmdSet" id="nugetVersionMenuGroup" priority="0x0600">
-        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_SOLNNODE" /><!--Solutionnode only-->
+        <Parent guid="guidNugetExtensionsCmdSet" id="nugetMaidMenu" /><!--Solutionnode only-->
+      </Group>
+
+      <Group guid="guidNugetExtensionsCmdSet" id="nugetMaidGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_SOLNNODE" />
+        <!--Solutionnode only-->
       </Group>
 
 
@@ -63,9 +79,6 @@
       <Button guid="guidNugetExtensionsCmdSet" id="cmdidLockNugetVersions" priority="0x0100" type="Button">
         <Parent guid="guidNugetExtensionsCmdSet" id="nugetVersionMenuGroup" />
         <Icon guid="guidImages" id="bmpPicSearch" />
-        <!-- the 2 lines below set the default visibility-->
-        <!--<CommandFlag>DefaultInvisible</CommandFlag>-->
-        <!--<CommandFlag>DynamicVisibility</CommandFlag>-->
         <Strings>
           <ButtonText>Lock Nuget Versions</ButtonText>
         </Strings>
@@ -74,9 +87,6 @@
       <Button guid="guidNugetExtensionsCmdSet" id="cmdidUnLockNugetVersions" priority="0x0100" type="Button">
         <Parent guid="guidNugetExtensionsCmdSet" id="nugetVersionMenuGroup" />
         <Icon guid="guidImages" id="bmpPicSearch" />
-        <!-- the 2 lines below set the default visibility-->
-        <!--<CommandFlag>DefaultInvisible</CommandFlag>-->
-        <!--<CommandFlag>DynamicVisibility</CommandFlag>-->
         <Strings>
           <ButtonText>Unlock Nuget Versions</ButtonText>
         </Strings>
@@ -106,6 +116,8 @@
 
     <!-- This is the guid used to group the menu commands together -->
     <GuidSymbol name="guidNugetExtensionsCmdSet" value="{68ce72a7-a177-4818-b1e9-4fa9ffc5c7f8}">
+      <IDSymbol name="nugetMaidMenu" value="0x1010" />
+      <IDSymbol name="nugetMaidGroup" value="0x1110" />
       <IDSymbol name="nugetVersionMenuGroup" value="0x1020" />
       <IDSymbol name="cmdidLockNugetVersions" value="0x0100" />
       <IDSymbol name="cmdidUnLockNugetVersions" value="0x0101" />
