@@ -19,10 +19,10 @@ NugetMaid can fix this by using the Nuget attribute **allowedVersions** that can
 
 Manually editing all the **packages.config** in a solution with multiple projects and many packages is very tidious, and here **NugetMaid** comes to your rescue :-)
 
-#### Nuget Lock Versions command
+#### Lock Nuget Versions command
 This menu item will find **all** packages.config files in a solution and then use the package versions for each package entry and append ``allowedVersions=[VERSION]`` to the package entry, thus locking the version.
 Use this to lock your package versions before building and restoring your packages.
 
-#### Nuget Unlock Versions command
+#### Unlock Nuget Versions command
 This is the opposite of the above. It will remove any ``allowedVersions=[VERSION]`` from all packages.config files found in the solution, thus allowing Nuget to roam free again...
 
