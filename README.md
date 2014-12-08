@@ -21,7 +21,7 @@ This is the opposite of the above. It will remove any ``allowedVersions=[VERSION
 
 ### How to get NugetMaid
 
-Your can get the latest **vsix** installer from the **releases** page which you can find here:
+Your can get the latest **vsix** installer from the **releases** page which you can find here: https://github.com/LogikBlitz/NugetMaid/releases
 
 Alternative you can build the solution manually.
 
