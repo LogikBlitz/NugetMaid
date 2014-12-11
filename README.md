@@ -25,7 +25,7 @@ Your can get the latest **vsix** installer from the **releases** page which you 
 
 Alternative you can build the solution manually.
 
-#### Building the soultion
+#### Building the solution
 Open the solution in Visual Studio 2013. Please mark that the [Visual Studio 2013 SDK](https://visualstudiogallery.msdn.microsoft.com/842766ba-1f32-40cf-8617-39365ebfc134) is a requirement.
 Simply build the solution in releasemode and get the **vsix** installer from the bin folder.
 
