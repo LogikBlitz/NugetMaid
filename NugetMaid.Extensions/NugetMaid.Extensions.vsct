@@ -134,18 +134,12 @@
       <IDSymbol name="cmdidUnLockNugetVersions" value="0x0101" />
     </GuidSymbol>
 
+    <!--Each new class that creates a new OleMenuCommand requieres a new grouping else they will not execute on button click-->
+    <!--Grouping GUID must relate to at least one command instanciation in the listing og GUID's-->
     <GuidSymbol name="guidNugetMaidCommandSetConfigsCmdSet" value="{38ea8a9b-b505-40d0-a3ec-5a01ea04b401}">
-      <IDSymbol name="nugetMaidMenu" value="0x1010" />
-      <IDSymbol name="nugetMaidGroup" value="0x1110" />
-      <IDSymbol name="nugetMaidCommandMenuGroup" value="0x1020" />
       <IDSymbol name="cmdidAddNugetConfigToSolution" value="0x0102" />
     </GuidSymbol>
-
-
-    <!--<GuidSymbol name="guidDialogCmdSet" value="{25fd982b-8cae-4cbd-a440-e03ffccde106}">
-      <IDSymbol name="cmdidAddPackages" value="0x0100" />
-      <IDSymbol name="cmdidAddPackagesForSolution" value="0x0200" />
-    </GuidSymbol>-->
+    
 
     <GuidSymbol name="guidImages" value="{685f270b-22dd-4f26-9c57-e6aeeee9a44d}">
       <IDSymbol name="bmpPic1" value="1" />
