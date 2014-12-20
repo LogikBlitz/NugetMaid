@@ -122,6 +122,8 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\Nuget\NugetAddConfigFile.cs" />
+    <Compile Include="Commands\Nuget\NugetCommand.cs" />
     <Compile Include="Helpers\Helper.cs" />
     <Compile Include="Helpers\HierachyExtension.cs" />
     <Compile Include="Helpers\HierachyIterator.cs" />
@@ -137,16 +139,14 @@
     <Compile Include="NugetMaid.ExtensionsPackage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PkgCmdID.cs" />
+    <Compile Include="Models\NugetConfigFile.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources.resx">
+      <MergeWithCTO>true</MergeWithCTO>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VSPackage.resx">
-      <MergeWithCTO>true</MergeWithCTO>
-      <ManifestResourceName>VSPackage</ManifestResourceName>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

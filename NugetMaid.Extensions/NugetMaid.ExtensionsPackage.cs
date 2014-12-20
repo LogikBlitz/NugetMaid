@@ -76,9 +76,13 @@ namespace LogikBlitz.NugetMaid
                 throw new ArgumentNullException("commandService",
                     "The OleCommandService cannot be null. Nuget Commands cannot be created");
             if (uiShell == null) throw new ArgumentNullException("uiShell", "uiShell cannot be null.");
+            var addConfigCommandExtension = new NugetAddConfigFile(uiShell);
+            commandService.AddCommand(addConfigCommandExtension.AddNugetConfigToSolutionOleMenuCommand());
+
             var extensions = new NugetLockVersions(uiShell);
             commandService.AddCommand(extensions.LockNugetVersionsOleMenuCommand());
             commandService.AddCommand(extensions.UnLockNugetVersionsOleMenuCommand());
+
         }
 
         #endregion

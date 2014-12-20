@@ -8,23 +8,19 @@ using System.Xml.Linq;
 using EnvDTE;
 using LogikBlitz.NugetMaid.Helpers;
 using LogikBlitz.NugetMaid.Models;
-using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 
 namespace LogikBlitz.NugetMaid.Commands.Nuget
 {
-    internal class NugetLockVersions //To get access to the UI
+    internal class NugetLockVersions : NugetCommand
     {
-        private readonly IVsUIShell _uiShell;
         private readonly List<string> _lockedFiles;
         private readonly List<string> _unlockedFiles;
 
 
-        public NugetLockVersions(IVsUIShell uiViewShell)
+        public NugetLockVersions(IVsUIShell uiViewShell) : base(uiViewShell)
         {
-            if (uiViewShell == null) throw new ArgumentNullException("uiViewShell", "The UI shell cannot be null");
-            _uiShell = uiViewShell;
             _lockedFiles = new List<string>();
             _unlockedFiles = new List<string>();
         }
@@ -85,25 +81,6 @@ namespace LogikBlitz.NugetMaid.Commands.Nuget
 
         #region Dialogs
 
-        private void ShowErrorOccurredDialog(Exception ex)
-        {
-            var clsid = Guid.Empty;
-            int result;
-            ErrorHandler.ThrowOnFailure(_uiShell.ShowMessageBox(
-                0,
-                ref clsid,
-                "An unknow error occurred.",
-                ex.Message,
-                string.Empty,
-                0,
-                OLEMSGBUTTON.OLEMSGBUTTON_OK,
-                OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_FIRST,
-                OLEMSGICON.OLEMSGICON_INFO,
-                0, // false
-                out result));
-        }
-
-
         private void ShowCommandResultDialog(IEnumerable<string> filePaths)
         {
             if (!filePaths.Any())
@@ -132,12 +109,6 @@ namespace LogikBlitz.NugetMaid.Commands.Nuget
         #endregion
 
         #region private methods
-
-        internal IVsSolution GetSolution
-        {
-            get { return Package.GetGlobalService(typeof (SVsSolution)) as IVsSolution; }
-        }
-
 
         private const int S_OK = 0;
         private const string AllowedVersionsDefinition = "allowedVersions";
@@ -265,39 +236,7 @@ namespace LogikBlitz.NugetMaid.Commands.Nuget
         #endregion
 
         #region Shared Logic
-
-        internal bool ApplicationStateIsValid()
-        {
-            var application = (DTE) Package.GetGlobalService(typeof (SDTE));
-            if (application.Solution == null || !application.Solution.IsOpen)
-            {
-                MessageBox.Show("Please open a solution first. ", "No solution");
-                return false;
-            }
-            if (application.Solution.IsDirty)
-                // solution must be saved otherwise adding/removing projects will raise errors
-            {
-                MessageBox.Show("Please save your solution first. \n" +
-                                "Select the solution in the Solution Explorer and press Ctrl-S. ",
-                    "Solution not saved");
-                return false;
-            }
-            return true;
-        }
-
-        internal XDocument GetXDocumentAtPath(string filepath)
-        {
-            if (string.IsNullOrWhiteSpace(filepath))
-            {
-                throw new ArgumentNullException("filepath");
-            }
-            if (!File.Exists(filepath)) throw new FileNotFoundException("File not found", filepath);
-
-            var document = XDocument.Load(filepath);
-            return document;
-        }
-
-
+        
         internal IEnumerable<XElement> GetPackagesElements(XDocument document)
         {
             if (document == null) throw new ArgumentNullException("document");

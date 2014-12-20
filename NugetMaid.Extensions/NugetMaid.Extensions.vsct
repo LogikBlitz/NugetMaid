@@ -52,7 +52,7 @@
          must be a menu. -->
     <Groups>
 
-      <Group guid="guidNugetExtensionsCmdSet" id="nugetVersionMenuGroup" priority="0x0600">
+      <Group guid="guidNugetExtensionsCmdSet" id="nugetMaidCommandMenuGroup" priority="0x0600">
         <Parent guid="guidNugetExtensionsCmdSet" id="nugetMaidMenu" /><!--Solutionnode only-->
       </Group>
 
@@ -77,7 +77,7 @@
           If you do not want an image next to your command, remove the Icon node /> -->
 
       <Button guid="guidNugetExtensionsCmdSet" id="cmdidLockNugetVersions" priority="0x0100" type="Button">
-        <Parent guid="guidNugetExtensionsCmdSet" id="nugetVersionMenuGroup" />
+        <Parent guid="guidNugetExtensionsCmdSet" id="nugetMaidCommandMenuGroup" />
         <Icon guid="guidImages" id="bmpPicSearch" />
         <Strings>
           <ButtonText>Lock Nuget Versions</ButtonText>
@@ -85,12 +85,23 @@
       </Button>
 
       <Button guid="guidNugetExtensionsCmdSet" id="cmdidUnLockNugetVersions" priority="0x0100" type="Button">
-        <Parent guid="guidNugetExtensionsCmdSet" id="nugetVersionMenuGroup" />
+        <Parent guid="guidNugetExtensionsCmdSet" id="nugetMaidCommandMenuGroup" />
         <Icon guid="guidImages" id="bmpPicSearch" />
         <Strings>
           <ButtonText>Unlock Nuget Versions</ButtonText>
         </Strings>
       </Button>
+
+      <Button guid="guidNugetMaidCommandSetConfigsCmdSet" id="cmdidAddNugetConfigToSolution" priority="0x0100" type="Button">
+        <Parent guid="guidNugetExtensionsCmdSet" id="nugetMaidCommandMenuGroup" />
+        <Icon guid="guidImages" id="bmpPicSearch" />
+        <Strings>
+          <ButtonText>Add nuget.config</ButtonText>
+        </Strings>
+      </Button>
+      
+      
+      
 
 
     </Buttons>
@@ -118,10 +129,18 @@
     <GuidSymbol name="guidNugetExtensionsCmdSet" value="{68ce72a7-a177-4818-b1e9-4fa9ffc5c7f8}">
       <IDSymbol name="nugetMaidMenu" value="0x1010" />
       <IDSymbol name="nugetMaidGroup" value="0x1110" />
-      <IDSymbol name="nugetVersionMenuGroup" value="0x1020" />
+      <IDSymbol name="nugetMaidCommandMenuGroup" value="0x1020" />
       <IDSymbol name="cmdidLockNugetVersions" value="0x0100" />
       <IDSymbol name="cmdidUnLockNugetVersions" value="0x0101" />
     </GuidSymbol>
+
+    <GuidSymbol name="guidNugetMaidCommandSetConfigsCmdSet" value="{38ea8a9b-b505-40d0-a3ec-5a01ea04b401}">
+      <IDSymbol name="nugetMaidMenu" value="0x1010" />
+      <IDSymbol name="nugetMaidGroup" value="0x1110" />
+      <IDSymbol name="nugetMaidCommandMenuGroup" value="0x1020" />
+      <IDSymbol name="cmdidAddNugetConfigToSolution" value="0x0102" />
+    </GuidSymbol>
+
 
     <!--<GuidSymbol name="guidDialogCmdSet" value="{25fd982b-8cae-4cbd-a440-e03ffccde106}">
       <IDSymbol name="cmdidAddPackages" value="0x0100" />
