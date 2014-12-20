@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="0e707c91-7054-48b7-9612-6e7d040054e4" Version="0.9.0" Language="en-US" Publisher="Thomas Blitz" />
+    <Identity Id="0e707c91-7054-48b7-9612-6e7d040054e4" Version="0.9.5" Language="en-US" Publisher="Thomas Blitz" />
     <DisplayName>NugetMaid</DisplayName>
     <Description xml:space="preserve">Helpfull extensions that aims to help and simplify, oterhwise tedious or complext tasks, in the Nuget domain.</Description>
     <MoreInfo>https://github.com/LogikBlitz/NugetMaid</MoreInfo>
